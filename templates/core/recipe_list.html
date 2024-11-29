@@ -1,0 +1,333 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Recipes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Righteous&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Righteous&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+
+  <style>
+    body{
+        background-color: #fff5f7;
+        font-family: 'Poppins',sans-serif;
+    }
+    .recipe-section{
+        background-color: white;
+        padding: 30px 30px;
+        border-radius: 30px;
+        box-shadow: 1px 1px 3px black;
+    }
+    #r1{
+        height: 250px;
+        width: 250px;
+        margin-left: 910px;
+        margin-top: -280px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        border-radius: 30px;
+    }
+    #r2{
+        height: 250px;
+        width: 250px;
+        margin-left: 910px;
+        margin-top: -290px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        border-radius: 30px;
+    }
+    #r3{
+        height: 250px;
+        width: 250px;
+        margin-left: 910px;
+        margin-top: -290px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        border-radius: 30px;
+    }
+    #r4{
+        height: 250px;
+        width: 250px;
+        margin-left: 910px;
+        margin-top: -290px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        border-radius: 30px;
+    }
+    #r5{
+        height: 250px;
+        width: 250px;
+        margin-left: 910px;
+        margin-top: -290px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        border-radius: 30px;
+    }
+    #r6{
+        height: 250px;
+        width: 250px;
+        margin-left: 910px;
+        margin-top: -270px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        border-radius: 30px;
+    }
+@font-face {
+  font-family: 'Breathing';
+  src: url("{% static 'fonts/Breathing.ttf' %}") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  }
+.box {
+    --mask: radial-gradient(36.89px at 50% calc(100% - 51px), #000 99%, #0000 101%) calc(50% - 40px) 0/80px 100%, 
+            radial-gradient(36.89px at 50% calc(100% + 31px), #0000 99%, #000 101%) 50% calc(100% - 20px)/80px 100% repeat-x;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+    background: hotpink;
+    width: 100%;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+.Logo {
+    height: 100px;
+    width: 100px;
+}
+
+img {
+    height: 300px;
+    width: 300px;
+    margin-top: -10px;
+}
+
+.link1, .link2 {
+    position: absolute;
+    font-size: large;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 50px;
+    top: 20px;
+    margin-left: 100px;
+}
+
+.link1 {
+    right: 340px;
+}
+
+.link2 {
+    left: 80px;
+}
+
+a:link, a:hover, a:active, a:visited {
+    text-decoration: none;
+    color: black;
+}
+.l1{
+    margin-left: 120px;
+
+}
+.l2{
+    margin-left: 120px;
+
+}
+.cart-icon {
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    margin-top:-120px;
+    margin-left: 1280px;
+    background-color: #fffece !important;
+    padding: 10px 30px;
+    border-radius: 30px;
+    width: 140px;
+    height: 47px;
+
+}
+
+.cart-icon:hover {
+    color:black !important;
+}
+h2{
+    color: hotpink;
+    font-family: 'Breathing',sans-serif;
+}
+#footer{ 
+    padding: 10px; 
+    width:107.9%; 
+    position: relative;
+    background-color: hotpink;
+    text-align: center !important;
+    margin-top: 100px;
+    position: absolute;
+    margin-left: -120px; 
+    padding: 30px 0 !important;
+    font-weight: 400;
+}
+
+.container {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+  </style>
+</head>
+<body>
+    <header>
+        <div class="box">
+            <img src="{% static 'images/logo_transparent.png' %}" alt="Logo" class="img">
+            <div class="link1">
+                <a href="{% url 'index' %}" class="l1">Home</a>
+                <a href="{% url 'product_list' %}" class="l1">Products</a>
+            </div>
+            <div class="link2">
+                <a href="{% url 'about' %}" class="l2">About</a>
+                <a href="#footer" class="l2">Contact</a>
+            </div>
+        </div>
+    </header>
+        <div class="ml-auto">
+            <a href="{% url 'view_cart' %}"  class="cart-icon">
+                <i class="fas fa-shopping-cart"></i> Cart
+            </a>
+        </div>
+    <div class="container py-5">
+        <h1 class="text-center mb-4">Our Recipes</h1>
+        <div class="recipe-section">
+            <h2>Recipe One : Chocolate Cake</h2>
+            <p><strong>Ingredients:</strong> Flour, sugar, cocoa powder, eggs, butter, milk</p>
+            <p><strong>Description:</strong> This chocolate cake is moist, rich, and perfect for any occasion. Ideal for birthdays and celebrations!</p>
+            <h4>Preparation Steps:</h4>
+            <ul>
+                <li>Preheat the oven to 350°F (175°C).</li>
+                <li>Grease and flour a round cake pan.</li>
+                <li>Mix the dry ingredients together in a bowl.</li>
+                <li>In a separate bowl, beat eggs, sugar, butter, and milk.</li>
+                <li>Combine the wet and dry ingredients until smooth.</li>
+                <li>Pour the batter into the prepared pan and bake for 30 minutes.</li>
+                <li>Allow the cake to cool before frosting with chocolate icing.</li>
+                <img src="{% static 'images/1hot.jpg' %}" id="r1">
+            </ul>
+        </div>
+<br><br>
+        <div class="recipe-section">
+            <h2 style="font-family: 'Breathing',sans-serif;">Recipe Two : Vanilla Cupcakes</h2>
+            <p><strong>Ingredients:</strong> Flour, sugar, butter, eggs, vanilla extract, milk</p>
+            <p><strong>Description:</strong> Light and fluffy vanilla cupcakes that melt in your mouth. Perfect for tea parties or afternoon snacks.</p>
+            <h4>Preparation Steps:</h4>
+            <ul>
+                <li>Preheat the oven to 350°F (175°C).</li>
+                <li>Line a muffin tin with cupcake liners.</li>
+                <li>In a bowl, mix together flour, sugar, baking powder, and salt.</li>
+                <li>In another bowl, cream together butter, eggs, vanilla extract, and milk.</li>
+                <li>Gradually add the wet ingredients into the dry ingredients and mix well.</li>
+                <li>Fill each cupcake liner halfway with batter.</li>
+                <li>Bake for 18-20 minutes or until a toothpick inserted comes out clean.</li>
+                <li>Cool and frost with vanilla buttercream icing.</li>
+                <img src="{% static 'images/imresizer-1732268750009.jpg' %}" id="r2">
+            </ul>
+        </div>
+        <br><br>
+        <div class="recipe-section">
+            <h2 style="font-family: 'Breathing',sans-serif;">Recipe Three : Lemon Raspberry Cake</h2>
+            <p><strong>Ingredients:</strong> Flour, sugar, lemons, raspberries, butter, eggs</p>
+            <p><strong>Description:</strong> A refreshing cake with tangy lemon and sweet raspberries, perfect for summer!</p>
+            <h4>Preparation Steps:</h4>
+            <ul>
+                <li>Preheat the oven to 350°F (175°C).</li>
+                <li>Grease and flour two 8-inch round cake pans.</li>
+                <li>Mix flour, sugar, baking powder, and salt in a bowl.</li>
+                <li>In another bowl, whisk together eggs, melted butter, lemon juice, and zest.</li>
+                <li>Combine the wet and dry ingredients, then fold in the raspberries.</li>
+                <li>Divide the batter between the two pans and bake for 25-30 minutes.</li>
+                <li>Cool the cakes and frost with lemon buttercream frosting.</li>
+                <img src="{% static 'images/imresizer-1732107252182.jpg' %}" id="r3">
+            </ul>
+        </div>
+        <br><br>
+        <div class="recipe-section">
+            <h2 style="font-family: 'Breathing',sans-serif;">Recipe Four : Strawberry Shortcake</h2>
+            <p><strong>Ingredients:</strong> Flour, butter, sugar, strawberries, heavy cream</p>
+            <p><strong>Description:</strong> A classic dessert with fresh strawberries and whipped cream over light shortcakes.</p>
+            <h4>Preparation Steps:</h4>
+            <ul>
+                <li>Preheat the oven to 375°F (190°C).</li>
+                <li>Mix flour, sugar, and baking powder in a bowl.</li>
+                <li>Add cold butter and cut it into the flour mixture using a pastry cutter until it resembles coarse crumbs.</li>
+                <li>Slowly add heavy cream and mix until the dough comes together.</li>
+                <li>Turn the dough out onto a floured surface, shape into a disc, and cut into rounds.</li>
+                <li>Place on a baking sheet and bake for 15-20 minutes.</li>
+                <li>While the shortcakes bake, whip the cream and slice the strawberries.</li>
+                <li>Once baked, assemble by layering the shortcake, strawberries, and whipped cream.</li>
+                <img src="{% static 'images/imresizer-1732279042327.jpg' %}" id="r4">
+            </ul>
+        </div>
+        <br><br>
+        <div class="recipe-section">
+            <h2 style="font-family: 'Breathing',sans-serif;">Recipe Five : Carrot Cake</h2>
+            <p><strong>Ingredients:</strong> Carrots, flour, sugar, eggs, walnuts, cinnamon</p>
+            <p><strong>Description:</strong> A moist carrot cake topped with cream cheese frosting. A crowd favorite for any celebration.</p>
+            <h4>Preparation Steps:</h4>
+            <ul>
+                <li>Preheat the oven to 350°F (175°C).</li>
+                <li>Grease and flour a 9x13-inch baking pan.</li>
+                <li>Mix flour, baking powder, cinnamon, and salt in a bowl.</li>
+                <li>In a separate bowl, beat eggs and sugar until fluffy.</li>
+                <li>Fold in grated carrots, walnuts, and the dry ingredients.</li>
+                <li>Pour the batter into the pan and bake for 35-40 minutes.</li>
+                <li>Cool and frost with cream cheese frosting.</li>
+                <img src="{% static 'images/imresizer-1732279151920.jpg' %}" id="r5">
+            </ul>
+        </div>
+        <br><br>
+        <div class="recipe-section">
+            <h2 style="font-family: 'Breathing',sans-serif;">Recipe Six : Blueberry Muffins</h2>
+            <p><strong>Ingredients:</strong> Blueberries, flour, sugar, butter, eggs</p>
+            <p><strong>Description:</strong> These blueberry muffins are soft, sweet, and perfect for breakfast or an afternoon snack.</p>
+            <h4>Preparation Steps:</h4>
+            <ul>
+                <li>Preheat the oven to 375°F (190°C) and line a muffin tin with paper liners.</li>
+                <li>In a bowl, combine flour, sugar, baking powder, and salt.</li>
+                <li>In another bowl, whisk together eggs, melted butter, and milk.</li>
+                <li>Mix the wet ingredients into the dry ingredients until combined.</li>
+                <li>Fold in the blueberries carefully to avoid mashing them.</li>
+                <li>Spoon the batter into the muffin tin and bake for 20-25 minutes.</li>
+                <img src="{% static 'images/imresizer-1732025468498.jpg' %}" id="r6">
+            </ul>
+        </div>
+
+    </div>
+    <div id="footer">
+        <p>&copy; 2024 Cakes & Bakes. All rights reserved.</p>
+        <p><i class="fa fa-phone"></i> +123-456-7890 | <i class="fa fa-envelope"></i> info@cakesandbakes.com</p>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

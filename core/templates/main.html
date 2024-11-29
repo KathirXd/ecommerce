@@ -1,0 +1,409 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Righteous&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <style>
+
+*{
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    background-color: #fff5f7;
+}
+@font-face {
+  font-family: 'Breathing';
+  src: url("{% static 'fonts/Breathing.ttf' %}") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  }
+.box {
+    --mask: radial-gradient(36.89px at 50% calc(100% - 51px), #000 99%, #0000 101%) calc(50% - 40px) 0/80px 100%, 
+            radial-gradient(36.89px at 50% calc(100% + 31px), #0000 99%, #000 101%) 50% calc(100% - 20px)/80px 100% repeat-x;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+    background: hotpink;
+    width: 100%;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.Logo {
+    height: 100px;
+    width: 100px;
+}
+
+img {
+    height: 300px;
+    width: 300px;
+    margin-top: -10px;
+}
+
+.link1, .link2 {
+    position: absolute;
+    font-size: large;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 50px;
+    top: 20px;
+    margin-left: 100px;
+}
+
+.link1 {
+    right: 340px;
+}
+
+.link2 {
+    left: 80px;
+}
+
+a:link, a:hover, a:active, a:visited {
+    text-decoration: none;
+    color: black;
+}
+.l1{
+    margin-left: 120px;
+
+}
+.l2{
+    margin-left: 120px;
+
+}
+
+.icon {
+    font-size: 30px;
+    position: absolute;
+    margin-top: 40px;
+    margin-left: 50px;
+    font-weight: normal;
+}
+
+.search {
+    font-size: 20px;
+    position: absolute;
+    margin-left: 40px;
+    margin-top: -30px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.cart {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+.bt1 {
+    background-color: transparent;
+    height: 50px;
+    width: 50px;
+    position: relative;
+    border: none;
+}
+
+
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.product-image {
+    width: 90%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 30px;
+    margin-bottom: 10px;
+    max-height: 200px;
+    padding: 10px 10px;
+}
+
+.product-name {
+    color: black !important;
+    text-decoration: none !important;
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+.product-price {
+    color: black !important;
+    text-decoration: none !important;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.add-to-cart-btn {
+    background-color: hotpink;
+    color: white !important;
+    border: none;
+    font-weight: 500;
+    padding: 8px 20px;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+    font-family: 'Poppins',sans-serif;
+    font-size: medium !important;
+}
+
+.add-to-cart-btn:hover {
+    color:black !important;
+    background-color:#fffece !important;
+}
+.cart-icon {
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    margin-top:-120px;
+    margin-left: 1280px;
+    background-color: #fffece !important;
+    padding: 10px 30px;
+    border-radius: 30px;
+    width: 140px;
+    height: 47px;
+
+}
+
+.cart-icon:hover {
+    color:black !important;
+}
+@media (max-width: 767px) {
+    .box {
+        height: 150px;  
+    }
+
+    .img {
+        width: 100px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .link1, .link2 {
+        font-size: 14px;
+        margin-left: 10px;
+        top: 10px;
+    }
+
+    .product-card {
+        margin-bottom: 20px;
+        padding: 10px;
+    }
+
+    .product-image {
+        max-height: 150px;  
+    }
+
+    .product-name {
+        font-size: 1rem;
+    }
+
+    .product-price {
+        font-size: 1rem;
+    }
+
+    .add-to-cart-btn {
+        font-size: 14px;
+    }
+
+    .cart {
+        margin-left: 80%;
+    }
+}
+
+/* Tablet and larger screen responsiveness */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .product-card {
+        padding: 20px;
+    }
+
+    .product-image {
+        max-height: 180px;
+    }
+
+    .product-name {
+        font-size: 1rem;
+    }
+
+    .add-to-cart-btn {
+        font-size: 16px;
+    }
+}
+
+/* Large screens */
+@media (min-width: 1025px) {
+    .product-card {
+        margin: 15px;
+    }
+
+    .product-image {
+        max-height: 200px;
+    }
+
+    .product-name {
+        font-size: 1.2rem;
+    }
+
+    .product-price {
+        font-size: 1.4rem;
+    }
+
+    .add-to-cart-btn {
+        font-size: 18px;
+    }
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+
+.product-card:hover .product-image {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #0056b3; 
+    transform: scale(1.1); 
+    transition: all 0.3s ease; 
+}
+
+
+.cart-icon:hover {
+    color: #0056b3; 
+    transform: scale(1.1); 
+    transition: all 0.3s ease; 
+}
+
+
+.product-name:hover {
+    color: #007bff; 
+    text-decoration: underline; 
+    transition: all 0.3s ease;
+}
+
+.product-price:hover {
+    color: #28a745; 
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+input[type=text]{
+    border-radius: 20px;
+    position: absolute;
+    width: 40.5%;
+}
+#footer{ 
+    padding: 10px; 
+    width:1527px; 
+    position: relative;
+    background-color: hotpink;
+    text-align: center;
+    margin-top: 100px;
+    position: absolute;
+    margin-left: -120px; 
+    padding: 30px 0 !important;
+    font-weight: 400;
+}
+
+.container {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="box">
+            <img src="{% static 'images/logo_transparent.png' %}" alt="Logo" class="img">
+            <div class="link1">
+                <a href="{% url 'index' %}" class="l1">Home</a>
+                <a href="{% url 'product_list' %}" class="l1">Products</a>
+            </div>
+            <div class="link2">
+                <a href="{% url 'about' %}" class="l2">About</a>
+                <a href="#footer" class="l2">Contact</a>
+            </div>
+        </div>
+    </header>
+        <div class="ml-auto">
+            <a href="{% url 'view_cart' %}"  class="cart-icon">
+                <i class="fas fa-shopping-cart"></i> Cart
+            </a>
+        </div>
+    </nav>
+    <div class="container py-5">
+        <h1 class="text-center mb-4" style="font-family: 'Breathing',sans-serif; font-size: 60px;">Our Products</h1>
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <input
+                    type="text"
+                    id="searchBar"
+                    class="form-control"
+                    placeholder="Search for products..."
+                    onkeyup="filterProducts()"
+                >
+            </div>
+        </div>
+
+        <div class="container py-5">
+            <h1 class="text-center mb-4" style="font-family: 'Breathing',sans-serif; font-size: 60px;"></h1>
+            <div class="row g-4">
+                {% for product in products %}
+                    <div class="col-md-3 col-sm-6 product-item" data-name="{{ product.name|lower }}">
+                        <div class="product-card">
+                            <img src="{{ product.image.url }}" alt="{{ product.name }}" class="product-image img-fluid">
+                            <h3 class="product-name mt-2">{{ product.name }}</h3>
+                            <p class="product-price">₹ {{ product.price }}</p>
+                            <a href="{% url 'add_to_cart' product.id %}" class="add-to-cart-btn">Add to Cart</a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <div id="footer">
+            <p>&copy; 2024 Cakes & Bakes. All rights reserved.</p>
+            <p><i class="fa fa-phone"></i> +123-456-7890 | <i class="fa fa-envelope"></i> info@cakesandbakes.com</p>
+        </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function filterProducts() {
+            const searchInput = document.getElementById("searchBar").value.toLowerCase();
+            const productItems = document.querySelectorAll(".product-item");
+
+            productItems.forEach((item) => {
+                const productName = item.getAttribute("data-name");
+                if (productName.includes(searchInput)) {
+                    item.style.display = "block"; 
+                } else {
+                    item.style.display = "none";
+                }
+            });
+        }
+    </script>
+</body>
+</html>

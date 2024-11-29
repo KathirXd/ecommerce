@@ -1,0 +1,2926 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Righteous&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+  <title>Main</title>
+  <style>
+    html{
+      scroll-behavior: smooth;
+    }
+    button:hover {
+      transform: scale(1.1);
+      transition: transform 0.2s ease-in-out;
+    }
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    body{
+      font-family: 'Breathing',sans-serif;
+      background-color: #fff5f7;
+     
+          
+    }
+    .bg{
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin-top: 700px;
+      filter: blur(2px);
+    }
+  .box {
+    --mask: 
+    radial-gradient(36.89px at 50% calc(100% - 51px), #000 99%, #0000 101%) calc(50% - 40px) 0/80px 100%, 
+    radial-gradient(36.89px at 50% calc(100% + 31px), #0000 99%, #000 101%) 50% calc(100% - 20px)/80px 100% repeat-x;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+    background: hotpink;
+    width: 100%;
+    height: 180px;
+  }
+  .Logo{
+    position: absolute;
+    height: 100px;
+    width: 100px;
+  }
+  img{
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    margin-top: -50px;
+    margin-left: 620px;
+  }
+  .link1{
+    position: absolute;
+    margin-top: 60px;
+    font-size: large;
+    margin-left: 860px;
+    font-family: 'Poppins',sans-serif;
+  }
+  .l1{
+    margin: 60px;
+  }
+  .link2{
+    position: absolute;
+    margin-top: 60px;
+    font-size: large;
+    margin-left: 260px;
+    font-family: 'Poppins',sans-serif;
+  }
+  .l2{
+    margin: 60px;
+  }
+  a:link{
+    text-decoration: none;
+    color: black;
+  }
+  a:hover{
+    text-decoration: none;
+    color: black;
+  }
+  a:active{
+    text-decoration: none;
+    color: black;
+  }
+  a:visited{
+    text-decoration: none;
+    color: black;
+  }
+   .icon{
+    position: absolute;
+    font-size: 30px;
+    margin-top: 40px;
+    margin-left: 50px;
+    font-weight:normal;
+  }
+  .search{
+    position:absolute;
+    font-size: 20px;
+    margin-left:40px ;
+    margin-top:-30px;
+    font-family: 'Poppins',sans-serif;
+  }
+  .cart{
+    position: absolute;
+    margin-top:50px ;
+    margin-left:1300px;
+
+  }
+  .bt1{
+    background-color: transparent;
+    height: 50px;
+    width: 50px;
+    position: relative;
+    border: none;
+  }
+  .nav-container{
+    background-color:white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    font-family: 'Poppins',sans-serif;
+    height: 450px;
+    width: 280px;
+    margin-left: 40px;
+    padding: 10px 10px;
+    font-size: larger ;
+    margin-top:30px;
+    
+    
+  }
+  .nav-block{
+    position: relative;
+    margin-top: 40px;
+    margin-left: 50px;
+    
+  }
+  .our{
+    font-size: 30px;
+    padding: 10px 10px;
+    margin-left: -10px;
+    font-family: 'Breathing',sans-serif;
+  }
+  .live-container{
+    position: absolute;
+    background-color: white;
+    margin-left: 390px;
+    width:1075px;
+    height: 450px;
+    margin-top:-450px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+
+  }
+  .feature-head{
+    margin-left: 40px;
+    margin-top:40px;
+    font-size:35px;
+    font-family: "Breathing",sans-serif;
+  }
+  img{
+    border-radius: 30px;
+  }
+  .slider{
+    padding: 10px;
+    margin-left: 10px;
+  }
+  .c1{
+   position: absolute;
+   margin-top: 10px;
+   margin-left: 45px;
+   max-width:6cm ;
+   max-height:6cm ;
+  }
+  .c2{
+   position: absolute;
+   margin-top: 10px;
+   margin-left: 390px;
+   max-width:6cm ;
+   max-height:6cm ;
+  }
+  .c4{
+   position: absolute;
+   margin-top: 10px;
+   margin-left: 740px;
+   max-width:6cm ;
+   max-height:6cm ;
+  }
+.slider-container {
+  display: flex;
+  overflow: hidden;  
+}
+
+.slider {
+  display: flex; 
+}
+
+.slider img {
+  border-radius: 30px; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;  
+}
+
+.slider img:hover {
+  transform: scale(1.1);  
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);  
+}
+.name-container{
+  font-size: 16px;
+  font-family: 'Poppins',sans-serif;
+  position: absolute;
+  margin-left: 500px;
+  margin-top: -80px;
+  font-weight: bold;
+}
+.name1{
+  margin-left:-10px;
+}
+.name2{
+  margin-left: 210px;
+}
+.name3{
+  margin-left: 245px;
+}
+.main-container1{
+    position: absolute;
+    background-color: white;
+    width:1445px;
+    height: 1140px;
+    margin-top:60px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    margin-left: 30px;
+}
+.main-name1{
+  position: absolute;
+  margin-top: 50px;
+  margin-left: 50px;
+  font-family: 'Breathing',sans-serif;
+  font-size: 40px;
+}
+.main1-cake-container {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  margin: 20px; 
+  padding: 10px;
+  
+}
+
+.main1-cake-item {
+  position: absolute;
+  background:transparent;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  height: 300px;
+  transition: transform 0.2s ease-in-out;
+  font-family: 'Poppins';
+  margin-top: 430px;
+  margin-left: 80px;
+  
+}
+
+.cake-image {  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.10);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: absolute;
+  border-radius: 30px;
+  margin-top: 160px;
+  margin-left: 80px;
+
+
+}
+.cake-image:hover{
+  transform: scale(1.1); 
+}
+
+.main1-cake1-name1 {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.main1-cake1-price1 {
+  font-size: 1em;
+  color: #888;
+  margin: 5px 0;
+}
+
+.main1-cake1-cart1 {
+  background-color:black;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 200px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.main1-cake1-cart1:hover {
+  background-color:white;
+  border:solid black 1px;
+  color: #000;
+}
+.main1-cake-item2{
+  position: absolute;
+  background:transparent;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  height: 300px; 
+  padding: 15px;
+  transition: transform 0.2s ease-in-out;
+  font-family: 'Poppins';
+  margin-top: 430px;
+  margin-left: 425px;
+  
+}
+
+.cake-image2{ 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.10);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: absolute;
+  border-radius: 30px;
+  margin-top: 160px;
+  margin-left:425px;
+
+
+}
+.cake-image2:hover{
+  transform: scale(1.1);
+}
+
+.main1-cake1-name2 {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.main1-cake1-price2{
+  font-size: 1em;
+  color: #888;
+  margin: 5px 0;
+}
+
+.main1-cake1-cart2{
+  background-color:black;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 200px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.main1-cake1-cart2:hover {
+  background-color:white;
+  border:solid black 1px;
+  color: #000;
+}
+.main1-cake-item3{
+  position: absolute;
+  background:transparent;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  height: 300px;
+  padding: 15px;
+  transition: transform 0.2s ease-in-out;
+  font-family: 'Poppins';
+  margin-top: 430px;
+  margin-left: 775px;
+  
+}
+
+.cake-image3{ 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.10);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: absolute;
+  border-radius: 30px;
+  margin-top: 160px;
+  margin-left:775px;
+
+
+}
+.cake-image3:hover{
+  transform: scale(1.1);
+}
+
+.main1-cake1-name3 {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.main1-cake1-price3{
+  font-size: 1em;
+  color: #888;
+  margin: 5px 0;
+}
+
+.main1-cake1-cart3{
+  background-color:black;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 200px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.main1-cake1-cart3:hover {
+  background-color:white;
+  border:solid black 1px;
+  color: #000;
+}
+.main1-cake-item4{
+  position: absolute;
+  background:transparent;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  height: 300px; 
+  padding: 15px;
+  transition: transform 0.2s ease-in-out;
+  font-family: 'Poppins';
+  margin-top: 430px;
+  margin-left: 1120px;
+  
+}
+
+.cake-image4{ 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.10);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: absolute;
+  border-radius: 30px;
+  margin-top: 160px;
+  margin-left:1120px;
+
+
+}
+.cake-image4:hover{
+  transform: scale(1.1);
+}
+
+.main1-cake1-name4 {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.main1-cake1-price4{
+  font-size: 1em;
+  color: #888;
+  margin: 5px 0;
+}
+
+.main1-cake1-cart4{
+  background-color:black;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 200px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.main1-cake1-cart4:hover {
+  background-color:white;
+  border:solid black 1px;
+  color: #000;
+}
+.main1-cake-item5{
+  position: absolute;
+  background:transparent;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  height: 300px;
+  transition: transform 0.2s ease-in-out;
+  font-family: 'Poppins';
+  margin-top:920px;
+  margin-left: 80px;
+  
+}
+
+.cake-image5{ 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.10);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: absolute;
+  border-radius: 30px;
+  margin-top: 650px;
+  margin-left: 80px;
+
+
+}
+.cake-image5:hover{
+  transform: scale(1.1);
+}
+
+.main1-cake1-name5 {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.main1-cake1-price5 {
+  font-size: 1em;
+  color: #888;
+  margin: 5px 0;
+}
+
+.main1-cake1-cart5 {
+  background-color:black;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 200px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.main1-cake1-cart5:hover {
+  background-color:white;
+  border:solid black 1px;
+  color: #000;
+}
+.main1-cake-item6{
+  position: absolute;
+  background:transparent;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  height: 300px;
+  padding: 15px;
+  transition: transform 0.2s ease-in-out;
+  font-family: 'Poppins';
+  margin-top:920px;
+  margin-left:425px;
+  
+}
+
+.cake-image6{ 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.10);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: absolute;
+  border-radius: 30px;
+  margin-top: 650px;
+  margin-left: 425px;
+
+
+}
+.cake-image6:hover{
+  transform: scale(1.1);
+}
+
+.main1-cake1-name6 {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.main1-cake1-price6 {
+  font-size: 1em;
+  color: #888;
+  margin: 5px 0;
+}
+
+.main1-cake1-cart6 {
+  background-color:black;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 200px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.main1-cake1-cart6:hover {
+  background-color:white;
+  border:solid black 1px;
+  color: #000;
+}
+.main1-cake-item7{
+  position: absolute;
+  background:transparent;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  height: 300px; /* Consistent width for all items */
+  padding: 15px;
+  transition: transform 0.2s ease-in-out;
+  font-family: 'Poppins';
+  margin-top:920px;
+  margin-left:775px;
+  
+}
+
+.cake-image7{ 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.10);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: absolute;
+  border-radius: 30px;
+  margin-top: 650px;
+  margin-left: 775px;
+
+
+}
+.cake-image7:hover{
+  transform: scale(1.1);
+}
+
+.main1-cake1-name7 {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.main1-cake1-price7 {
+  font-size: 1em;
+  color: #888;
+  margin: 5px 0;
+}
+
+.main1-cake1-cart7 {
+  background-color:black;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 200px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.main1-cake1-cart7:hover {
+  background-color:white;
+  border:solid black 1px;
+  color: #000;
+}
+.main1-cake-item8{
+  position: absolute;
+  background:transparent;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  height: 300px; /* Consistent width for all items */
+  padding: 15px;
+  transition: transform 0.2s ease-in-out;
+  font-family: 'Poppins';
+  margin-top:920px;
+  margin-left:1120px;
+  
+}
+
+.cake-image8{ 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.10);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: absolute;
+  border-radius: 30px;
+  margin-top: 650px;
+  margin-left: 1120px;
+
+
+}
+.cake-image8:hover{
+  transform: scale(1.1);
+}
+
+.main1-cake1-name8 {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.main1-cake1-price8 {
+  font-size: 1em;
+  color: #888;
+  margin: 5px 0;
+}
+
+.main1-cake1-cart8 {
+  background-color:black;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 200px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.main1-cake1-cart8:hover {
+  background-color:white;
+  border:solid black 1px;
+  color: #000;
+}
+.main-container2{
+    position: absolute;
+    background-color: white;
+    width:1445px;
+    height: 1140px;
+    margin-top:1260px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    margin-left: 30px;
+}
+.main-name2{
+  position: absolute;
+  margin-top: 50px;
+  margin-left: 50px;
+  font-family: 'Breathing',sans-serif;
+  font-size: 40px;
+}
+.main1-cake-container {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px; /* Adds spacing between items */
+  margin: 20px; /* Centers the container */
+  padding: 10px;
+  
+}
+
+.main2-cake-item1{
+  position: absolute;
+  background:transparent;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  height: 300px; /* Consistent width for all items */
+  padding: 15px;
+  transition: transform 0.2s ease-in-out;
+  font-family: 'Poppins';
+  margin-top: 430px;
+  margin-left: 80px;
+  
+}
+
+.main2-cake-image1{  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.10);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: absolute;
+  border-radius: 30px;
+  margin-top: 160px;
+  margin-left: 80px;
+
+
+}
+.main2-cake-image1:hover{
+  transform: scale(1.1); 
+}
+.main1-cake1-name1 {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 5px 0;
+}
+.main2-cake1-price1 {
+  font-size: 1em;
+  color: #888;
+  margin: 5px 0;
+}
+
+.main2-cake1-cart1 {
+  background-color:black;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 200px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.main2-cake1-cart1:hover {
+  background-color:white;
+  border:solid black 1px;
+  color: #000;
+}
+.main2-cake-item2{
+  position: absolute;
+  background:transparent;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  height: 300px; /* Consistent width for all items */
+  padding: 15px;
+  transition: transform 0.2s ease-in-out;
+  font-family: 'Poppins';
+  margin-top: 430px;
+  margin-left: 425px;
+  
+}
+
+.main2-cake-image2{  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.10);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: absolute;
+  border-radius: 30px;
+  margin-top: 160px;
+  margin-left: 425px;
+
+
+}
+.main2-cake-image2:hover{
+  transform: scale(1.1); 
+}
+.main1-cake1-name2 {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 5px 0;
+}
+.main2-cake1-price2 {
+  font-size: 1em;
+  color: #888;
+  margin: 5px 0;
+}
+
+.main2-cake1-cart2 {
+  background-color:black;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 200px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.main2-cake1-cart2:hover {
+  background-color:white;
+  border:solid black 1px;
+  color: #000;
+}
+.main2-cake-item3{
+  position: absolute;
+  background:transparent;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  height: 300px; /* Consistent width for all items */
+  padding: 15px;
+  transition: transform 0.2s ease-in-out;
+  font-family: 'Poppins';
+  margin-top: 430px;
+  margin-left: 775px;
+  
+}
+
+.main2-cake-image3{  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.10);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: absolute;
+  border-radius: 30px;
+  margin-top: 160px;
+  margin-left: 775px;
+
+
+}
+.main2-cake-image3:hover{
+  transform: scale(1.1); 
+}
+.main1-cake1-name3 {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 5px 0;
+}
+.main2-cake1-price3 {
+  font-size: 1em;
+  color: #888;
+  margin: 5px 0;
+}
+
+.main2-cake1-cart3 {
+  background-color:black;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 200px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.main2-cake1-cart3:hover {
+  background-color:white;
+  border:solid black 1px;
+  color: #000;
+}
+.main2-cake-item4{
+  position: absolute;
+  background:transparent;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  height: 300px; /* Consistent width for all items */
+  padding: 15px;
+  transition: transform 0.2s ease-in-out;
+  font-family: 'Poppins';
+  margin-top: 430px;
+  margin-left: 1120px;
+  
+}
+
+.main2-cake-image4{  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.10);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: absolute;
+  border-radius: 30px;
+  margin-top: 160px;
+  margin-left: 1120px;
+
+
+}
+.main2-cake-image4:hover{
+  transform: scale(1.1); 
+}
+.main1-cake1-name4 {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 5px 0;
+}
+.main2-cake1-price4 {
+  font-size: 1em;
+  color: #888;
+  margin: 5px 0;
+}
+
+.main2-cake1-cart4 {
+  background-color:black;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 200px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.main2-cake1-cart4:hover {
+  background-color:white;
+  border:solid black 1px;
+  color: #000;
+}
+.main2-cake-item5{
+  position: absolute;
+  background:transparent;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  height: 300px; /* Consistent width for all items */
+  padding: 15px;
+  transition: transform 0.2s ease-in-out;
+  font-family: 'Poppins';
+  margin-top: 920px;
+  margin-left: 80px;
+  
+}
+
+.main2-cake-image5{  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.10);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: absolute;
+  border-radius: 30px;
+  margin-top: 650px;
+  margin-left: 80px;
+
+
+}
+.main2-cake-image5:hover{
+  transform: scale(1.1); 
+}
+.main1-cake1-name5 {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 5px 0;
+}
+.main2-cake1-price5 {
+  font-size: 1em;
+  color: #888;
+  margin: 5px 0;
+}
+
+.main2-cake1-cart5{
+  background-color:black;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 200px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.main2-cake1-cart5:hover {
+  background-color:white;
+  border:solid black 1px;
+  color: #000;
+}
+.main2-cake-item6{
+  position: absolute;
+  background:transparent;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  height: 300px; /* Consistent width for all items */
+  padding: 15px;
+  transition: transform 0.2s ease-in-out;
+  font-family: 'Poppins';
+  margin-top: 920px;
+  margin-left: 425px;
+  
+}
+
+.main2-cake-image6{  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.10);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: absolute;
+  border-radius: 30px;
+  margin-top: 650px;
+  margin-left: 425px;
+
+
+}
+.main2-cake-image6:hover{
+  transform: scale(1.1); 
+}
+.main1-cake1-name6{
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 5px 0;
+}
+.main2-cake1-price6{
+  font-size: 1em;
+  color: #888;
+  margin: 5px 0;
+}
+
+.main2-cake1-cart6{
+  background-color:black;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 200px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.main2-cake1-cart6:hover {
+  background-color:white;
+  border:solid black 1px;
+  color: #000;
+}
+.main2-cake-item7{
+  position: absolute;
+  background:transparent;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  height: 300px; /* Consistent width for all items */
+  padding: 15px;
+  transition: transform 0.2s ease-in-out;
+  font-family: 'Poppins';
+  margin-top: 920px;
+  margin-left: 775px;
+  
+}
+
+.main2-cake-image7{  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.10);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: absolute;
+  border-radius: 30px;
+  margin-top: 650px;
+  margin-left: 775px;
+
+
+}
+.main2-cake-image7:hover{
+  transform: scale(1.1); 
+}
+.main1-cake1-name7{
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 5px 0;
+}
+.main2-cake1-price7{
+  font-size: 1em;
+  color: #888;
+  margin: 5px 0;
+}
+
+.main2-cake1-cart7{
+  background-color:black;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 200px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.main2-cake1-cart7:hover {
+  background-color:white;
+  border:solid black 1px;
+  color: #000;
+}
+.main2-cake-item8{
+  position: absolute;
+  background:transparent;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  height: 300px; /* Consistent width for all items */
+  padding: 15px;
+  transition: transform 0.2s ease-in-out;
+  font-family: 'Poppins';
+  margin-top: 920px;
+  margin-left: 1120px;
+  
+}
+
+.main2-cake-image8{  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.10);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: absolute;
+  border-radius: 30px;
+  margin-top: 650px;
+  margin-left: 1120px;
+
+
+}
+.main2-cake-image8:hover{
+  transform: scale(1.1); 
+}
+.main1-cake1-name8{
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 5px 0;
+}
+.main2-cake1-price8{
+  font-size: 1em;
+  color: #888;
+  margin: 5px 0;
+}
+
+.main2-cake1-cart8{
+  background-color:black;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 200px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.main2-cake1-cart8:hover {
+  background-color:white;
+  border:solid black 1px;
+  color: #000;
+}
+.main-container3{
+    position: absolute;
+    background-color: white;
+    width:1445px;
+    height: 1140px;
+    margin-top:2465px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    margin-left: 30px;
+}
+.main-name3{
+  position: absolute;
+  margin-top: 50px;
+  margin-left: 50px;
+  font-family: 'Breathing',sans-serif;
+  font-size: 40px;
+}
+.main3-cake-item1{
+  position: absolute;
+  background:transparent;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  height: 300px; /* Consistent width for all items */
+  padding: 15px;
+  transition: transform 0.2s ease-in-out;
+  font-family: 'Poppins';
+  margin-top: 430px;
+  margin-left: 80px;
+  
+}
+
+.main3-cake-image1{  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.10);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: absolute;
+  border-radius: 30px;
+  margin-top:160px;
+  margin-left: 80px;
+
+
+}
+.main3-cake-image1:hover{
+  transform: scale(1.1); 
+}
+.main3-cake1-name1{
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 5px 0;
+}
+.main3-cake1-price1{
+  font-size: 1em;
+  color: #888;
+  margin: 5px 0;
+}
+
+.main3-cake1-cart1{
+  background-color:black;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 200px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.main3-cake1-cart1:hover {
+  background-color:white;
+  border:solid black 1px;
+  color: #000;
+}
+.main3-cake-item2{
+  position: absolute;
+  background:transparent;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  height: 300px; /* Consistent width for all items */
+  padding: 15px;
+  transition: transform 0.2s ease-in-out;
+  font-family: 'Poppins';
+  margin-top: 430px;
+  margin-left: 425px;
+  
+}
+
+.main3-cake-image2{  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.10);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: absolute;
+  border-radius: 30px;
+  margin-top:160px;
+  margin-left: 425px;
+
+
+}
+.main3-cake-image2:hover{
+  transform: scale(1.1); 
+}
+.main3-cake1-name2{
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 5px 0;
+}
+.main3-cake1-price2{
+  font-size: 1em;
+  color: #888;
+  margin: 5px 0;
+}
+
+.main3-cake1-cart2{
+  background-color:black;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 200px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.main3-cake1-cart2:hover {
+  background-color:white;
+  border:solid black 1px;
+  color: #000;
+}
+.main3-cake-item3{
+  position: absolute;
+  background:transparent;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  height: 300px; /* Consistent width for all items */
+  padding: 15px;
+  transition: transform 0.2s ease-in-out;
+  font-family: 'Poppins';
+  margin-top: 430px;
+  margin-left: 775px;
+  
+}
+
+.main3-cake-image3{  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.10);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: absolute;
+  border-radius: 30px;
+  margin-top:160px;
+  margin-left: 775px;
+
+
+}
+.main3-cake-image3:hover{
+  transform: scale(1.1); 
+}
+.main3-cake1-name3{
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 5px 0;
+}
+.main3-cake1-price3{
+  font-size: 1em;
+  color: #888;
+  margin: 5px 0;
+}
+
+.main3-cake1-cart3{
+  background-color:black;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 200px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.main3-cake1-cart3:hover {
+  background-color:white;
+  border:solid black 1px;
+  color: #000;
+}
+.main3-cake-item4{
+  position: absolute;
+  background:transparent;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  height: 300px; /* Consistent width for all items */
+  padding: 15px;
+  transition: transform 0.2s ease-in-out;
+  font-family: 'Poppins';
+  margin-top: 430px;
+  margin-left: 1120px;
+  
+}
+
+.main3-cake-image4{  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.10);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: absolute;
+  border-radius: 30px;
+  margin-top:160px;
+  margin-left: 1120px;
+
+
+}
+.main3-cake-image4:hover{
+  transform: scale(1.1); 
+}
+.main3-cake1-name4{
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 5px 0;
+}
+.main3-cake1-price4{
+  font-size: 1em;
+  color: #888;
+  margin: 5px 0;
+}
+
+.main3-cake1-cart4{
+  background-color:black;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 200px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.main3-cake1-cart4:hover {
+  background-color:white;
+  border:solid black 1px;
+  color: #000;
+}
+.main3-cake-item5{
+  position: absolute;
+  background:transparent;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  height: 300px; /* Consistent width for all items */
+  padding: 15px;
+  transition: transform 0.2s ease-in-out;
+  font-family: 'Poppins';
+  margin-top: 920px;
+  margin-left: 80px;
+  
+}
+
+.main3-cake-image5{  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.10);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: absolute;
+  border-radius: 30px;
+  margin-top:650px;
+  margin-left: 80px;
+
+
+}
+.main3-cake-image5:hover{
+  transform: scale(1.1); 
+}
+.main3-cake1-name5{
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 5px 0;
+}
+.main3-cake1-price5{
+  font-size: 1em;
+  color: #888;
+  margin: 5px 0;
+}
+
+.main3-cake1-cart5{
+  background-color:black;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 200px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.main3-cake1-cart5:hover {
+  background-color:white;
+  border:solid black 1px;
+  color: #000;
+}
+.main3-cake-item6{
+  position: absolute;
+  background:transparent;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  height: 300px; /* Consistent width for all items */
+  padding: 15px;
+  transition: transform 0.2s ease-in-out;
+  font-family: 'Poppins';
+  margin-top: 920px;
+  margin-left: 425px;
+  
+}
+
+.main3-cake-image6{  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.10);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: absolute;
+  border-radius: 30px;
+  margin-top:650px;
+  margin-left:425px;
+
+
+}
+.main3-cake-image6:hover{
+  transform: scale(1.1); 
+}
+.main3-cake1-name6{
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 5px 0;
+}
+.main3-cake1-price6{
+  font-size: 1em;
+  color: #888;
+  margin: 5px 0;
+}
+
+.main3-cake1-cart6{
+  background-color:black;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 200px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.main3-cake1-cart6:hover {
+  background-color:white;
+  border:solid black 1px;
+  color: #000;
+}
+.main3-cake-item7{
+  position: absolute;
+  background:transparent;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  height: 300px; /* Consistent width for all items */
+  padding: 15px;
+  transition: transform 0.2s ease-in-out;
+  font-family: 'Poppins';
+  margin-top: 920px;
+  margin-left: 775px;
+  
+}
+
+.main3-cake-image7{  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.10);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: absolute;
+  border-radius: 30px;
+  margin-top:650px;
+  margin-left:775px;
+
+
+}
+.main3-cake-image7:hover{
+  transform: scale(1.1); 
+}
+.main3-cake1-name7{
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 5px 0;
+}
+.main3-cake1-price7{
+  font-size: 1em;
+  color: #888;
+  margin: 5px 0;
+}
+
+.main3-cake1-cart7{
+  background-color:black;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 200px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.main3-cake1-cart7:hover {
+  background-color:white;
+  border:solid black 1px;
+  color: #000;
+}
+.main3-cake-item8{
+  position: absolute;
+  background:transparent;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  height: 300px; /* Consistent width for all items */
+  padding: 15px;
+  transition: transform 0.2s ease-in-out;
+  font-family: 'Poppins';
+  margin-top: 920px;
+  margin-left: 1120px;
+  
+}
+
+.main3-cake-image8{  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.10);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: absolute;
+  border-radius: 30px;
+  margin-top:650px;
+  margin-left:1120px;
+
+
+}
+.main3-cake-image8:hover{
+  transform: scale(1.1); 
+}
+.main3-cake1-name8{
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 5px 0;
+}
+.main3-cake1-price8{
+  font-size: 1em;
+  color: #888;
+  margin: 5px 0;
+}
+
+.main3-cake1-cart8{
+  background-color:black;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 200px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.main3-cake1-cart8:hover {
+  background-color:white;
+  border:solid black 1px;
+  color: #000;
+}
+.main-container4{
+    position: absolute;
+    background-color: white;
+    width:1445px;
+    height: 1140px;
+    margin-top:3665px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    margin-left: 30px;
+}
+.main-name4{
+  position: absolute;
+  margin-top: 50px;
+  margin-left: 50px;
+  font-family: 'Breathing',sans-serif;
+  font-size: 40px;
+}
+.main-container4{
+    position: absolute;
+    background-color: white;
+    width:1445px;
+    height: 1140px;
+    margin-top:3665px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    margin-left: 30px;
+}
+.main-name4{
+  position: absolute;
+  margin-top: 50px;
+  margin-left: 50px;
+  font-family: 'Breathing',sans-serif;
+  font-size: 40px;
+}
+.main4-cake-item1{
+  position: absolute;
+  background:transparent;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  height: 300px; /* Consistent width for all items */
+  padding: 15px;
+  transition: transform 0.2s ease-in-out;
+  font-family: 'Poppins';
+  margin-top: 430px;
+  margin-left: 80px;
+  
+}
+
+.main4-cake-image1{  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.10);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: absolute;
+  border-radius: 30px;
+  margin-top:160px;
+  margin-left:80px;
+
+
+}
+.main4-cake-image1:hover{
+  transform: scale(1.1); 
+}
+.main4-cake1-name1{
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 5px 0;
+}
+.main4-cake1-price1{
+  font-size: 1em;
+  color: #888;
+  margin: 5px 0;
+}
+
+.main4-cake1-cart1{
+  background-color:black;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 200px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.main4-cake1-cart1:hover {
+  background-color:white;
+  border:solid black 1px;
+  color: #000;
+}
+.main4-cake-item2{
+  position: absolute;
+  background:transparent;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  height: 300px; /* Consistent width for all items */
+  padding: 15px;
+  transition: transform 0.2s ease-in-out;
+  font-family: 'Poppins';
+  margin-top: 430px;
+  margin-left: 425px;
+  
+}
+
+.main4-cake-image2{  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.10);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: absolute;
+  border-radius: 30px;
+  margin-top:160px;
+  margin-left:425px;
+
+
+}
+.main4-cake-image2:hover{
+  transform: scale(1.1); 
+}
+.main4-cake1-name2{
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 5px 0;
+}
+.main4-cake1-price2{
+  font-size: 1em;
+  color: #888;
+  margin: 5px 0;
+}
+
+.main4-cake1-cart2{
+  background-color:black;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 200px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.main4-cake1-cart2:hover {
+  background-color:white;
+  border:solid black 1px;
+  color: #000;
+}
+.main4-cake-item3{
+  position: absolute;
+  background:transparent;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  height: 300px; /* Consistent width for all items */
+  padding: 15px;
+  transition: transform 0.2s ease-in-out;
+  font-family: 'Poppins';
+  margin-top: 430px;
+  margin-left: 775px;
+  
+}
+
+.main4-cake-image3{  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.10);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: absolute;
+  border-radius: 30px;
+  margin-top:160px;
+  margin-left:775px;
+
+
+}
+.main4-cake-image3:hover{
+  transform: scale(1.1); 
+}
+.main4-cake1-name3{
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 5px 0;
+}
+.main4-cake1-price3{
+  font-size: 1em;
+  color: #888;
+  margin: 5px 0;
+}
+
+.main4-cake1-cart3{
+  background-color:black;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 200px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.main4-cake1-cart3:hover {
+  background-color:white;
+  border:solid black 1px;
+  color: #000;
+}
+.main4-cake-item4{
+  position: absolute;
+  background:transparent;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  height: 300px; /* Consistent width for all items */
+  padding: 15px;
+  transition: transform 0.2s ease-in-out;
+  font-family: 'Poppins';
+  margin-top: 430px;
+  margin-left: 1120px;
+  
+}
+
+.main4-cake-image4{  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.10);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: absolute;
+  border-radius: 30px;
+  margin-top:160px;
+  margin-left:1120px;
+
+
+}
+.main4-cake-image4:hover{
+  transform: scale(1.1); 
+}
+.main4-cake1-name4{
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 5px 0;
+}
+.main4-cake1-price4{
+  font-size: 1em;
+  color: #888;
+  margin: 5px 0;
+}
+
+.main4-cake1-cart4{
+  background-color:black;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 200px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.main4-cake1-cart4:hover {
+  background-color:white;
+  border:solid black 1px;
+  color: #000;
+}
+.main4-cake-item5{
+  position: absolute;
+  background:transparent;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  height: 300px; /* Consistent width for all items */
+  padding: 15px;
+  transition: transform 0.2s ease-in-out;
+  font-family: 'Poppins';
+  margin-top: 920px;
+  margin-left: 80px;
+  
+}
+
+.main4-cake-image5{  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.10);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: absolute;
+  border-radius: 30px;
+  margin-top:650px;
+  margin-left:80px;
+
+
+}
+.main4-cake-image5:hover{
+  transform: scale(1.1); 
+}
+.main4-cake1-name5{
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 5px 0;
+}
+.main4-cake1-price5{
+  font-size: 1em;
+  color: #888;
+  margin: 5px 0;
+}
+
+.main4-cake1-cart5{
+  background-color:black;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 200px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.main4-cake1-cart5:hover {
+  background-color:white;
+  border:solid black 1px;
+  color: #000;
+}
+.main4-cake-item6{
+  position: absolute;
+  background:transparent;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  height: 300px; /* Consistent width for all items */
+  padding: 15px;
+  transition: transform 0.2s ease-in-out;
+  font-family: 'Poppins';
+  margin-top: 920px;
+  margin-left:425px;
+  
+}
+
+.main4-cake-image6{  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.10);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: absolute;
+  border-radius: 30px;
+  margin-top:650px;
+  margin-left:425px;
+
+
+}
+.main4-cake-image6:hover{
+  transform: scale(1.1); 
+}
+.main4-cake1-name6{
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 5px 0;
+}
+.main4-cake1-price6{
+  font-size: 1em;
+  color: #888;
+  margin: 5px 0;
+}
+
+.main4-cake1-cart6{
+  background-color:black;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 200px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.main4-cake1-cart6:hover {
+  background-color:white;
+  border:solid black 1px;
+  color: #000;
+}
+.main4-cake-item7{
+  position: absolute;
+  background:transparent;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  height: 300px; /* Consistent width for all items */
+  padding: 15px;
+  transition: transform 0.2s ease-in-out;
+  font-family: 'Poppins';
+  margin-top: 920px;
+  margin-left:775px;
+  
+}
+
+.main4-cake-image7{  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.10);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: absolute;
+  border-radius: 30px;
+  margin-top:650px;
+  margin-left:775px;
+
+
+}
+.main4-cake-image7:hover{
+  transform: scale(1.1); 
+}
+.main4-cake1-name7{
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 5px 0;
+}
+.main4-cake1-price7{
+  font-size: 1em;
+  color: #888;
+  margin: 5px 0;
+}
+
+.main4-cake1-cart7{
+  background-color:black;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 200px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.main4-cake1-cart7:hover {
+  background-color:white;
+  border:solid black 1px;
+  color: #000;
+}
+.main4-cake-item8{
+  position: absolute;
+  background:transparent;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  height: 300px; /* Consistent width for all items */
+  padding: 15px;
+  transition: transform 0.2s ease-in-out;
+  font-family: 'Poppins';
+  margin-top: 920px;
+  margin-left:1120px;
+  
+}
+
+.main4-cake-image8{  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.10);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: absolute;
+  border-radius: 30px;
+  margin-top:650px;
+  margin-left:1120px;
+
+
+}
+.main4-cake-image8:hover{
+  transform: scale(1.1); 
+}
+.main4-cake1-name8{
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 5px 0;
+}
+.main4-cake1-price8{
+  font-size: 1em;
+  color: #888;
+  margin: 5px 0;
+}
+
+.main4-cake1-cart8{
+  background-color:black;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 200px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.main4-cake1-cart8:hover {
+  background-color:white;
+  border:solid black 1px;
+  color: #000;
+}
+.main-container5{
+    position: absolute;
+    background-color: white;
+    width:1445px;
+    height: 1140px;
+    margin-top:4865px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    margin-left: 30px;
+}
+.main-name5{
+  position: absolute;
+  margin-top: 50px;
+  margin-left: 50px;
+  font-family: 'Breathing',sans-serif;
+  font-size: 40px;
+}
+.main5-cake-item1{
+  position: absolute;
+  background:transparent;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  height: 300px; /* Consistent width for all items */
+  padding: 15px;
+  transition: transform 0.2s ease-in-out;
+  font-family: 'Poppins';
+  margin-top: 430px;
+  margin-left: 80px;
+  
+}
+
+.main5-cake-image1{  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.10);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: absolute;
+  border-radius: 30px;
+  margin-top:160px;
+  margin-left:80px;
+
+
+}
+.main5-cake-image1:hover{
+  transform: scale(1.1); 
+}
+.main5-cake1-name1{
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 5px 0;
+}
+.main5-cake1-price1{
+  font-size: 1em;
+  color: #888;
+  margin: 5px 0;
+}
+
+.main5-cake1-cart1{
+  background-color:black;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 200px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.main5-cake1-cart1:hover {
+  background-color:white;
+  border:solid black 1px;
+  color: #000;
+}
+.main5-cake-item2{
+  position: absolute;
+  background:transparent;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  height: 300px; /* Consistent width for all items */
+  padding: 15px;
+  transition: transform 0.2s ease-in-out;
+  font-family: 'Poppins';
+  margin-top: 430px;
+  margin-left: 425px;
+  
+}
+
+.main5-cake-image2{  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.10);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: absolute;
+  border-radius: 30px;
+  margin-top:160px;
+  margin-left:425px;
+
+
+}
+.main5-cake-image2:hover{
+  transform: scale(1.1); 
+}
+.main5-cake1-name2{
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 5px 0;
+}
+.main5-cake1-price2{
+  font-size: 1em;
+  color: #888;
+  margin: 5px 0;
+}
+
+.main5-cake1-cart2{
+  background-color:black;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 200px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.main5-cake1-cart2:hover {
+  background-color:white;
+  border:solid black 1px;
+  color: #000;
+}
+.main5-cake-item3{
+  position: absolute;
+  background:transparent;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  height: 300px; /* Consistent width for all items */
+  padding: 15px;
+  transition: transform 0.2s ease-in-out;
+  font-family: 'Poppins';
+  margin-top: 430px;
+  margin-left: 775px;
+  
+}
+
+.main5-cake-image3{  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.10);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: absolute;
+  border-radius: 30px;
+  margin-top:160px;
+  margin-left:775px;
+
+
+}
+.main5-cake-image3:hover{
+  transform: scale(1.1); 
+}
+.main5-cake1-name3{
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 5px 0;
+}
+.main5-cake1-price3{
+  font-size: 1em;
+  color: #888;
+  margin: 5px 0;
+}
+
+.main5-cake1-cart3{
+  background-color:black;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 200px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.main5-cake1-cart3:hover {
+  background-color:white;
+  border:solid black 1px;
+  color: #000;
+}
+.main5-cake-item4{
+  position: absolute;
+  background:transparent;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  height: 300px; /* Consistent width for all items */
+  padding: 15px;
+  transition: transform 0.2s ease-in-out;
+  font-family: 'Poppins';
+  margin-top: 430px;
+  margin-left: 1120px;
+  
+}
+
+.main5-cake-image4{  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.10);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: absolute;
+  border-radius: 30px;
+  margin-top:160px;
+  margin-left:1120px;
+
+
+}
+.main5-cake-image4:hover{
+  transform: scale(1.1); 
+}
+.main5-cake1-name4{
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 5px 0;
+}
+.main5-cake1-price4{
+  font-size: 1em;
+  color: #888;
+  margin: 5px 0;
+}
+
+.main5-cake1-cart4{
+  background-color:black;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 200px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.main5-cake1-cart4:hover {
+  background-color:white;
+  border:solid black 1px;
+  color: #000;
+}
+.main5-cake-item5{
+  position: absolute;
+  background:transparent;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  height: 300px; /* Consistent width for all items */
+  padding: 15px;
+  transition: transform 0.2s ease-in-out;
+  font-family: 'Poppins';
+  margin-top: 920px;
+  margin-left: 80px;
+  
+}
+
+.main5-cake-image5{  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.10);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: absolute;
+  border-radius: 30px;
+  margin-top:650px;
+  margin-left:80px;
+
+
+}
+.main5-cake-image5:hover{
+  transform: scale(1.1); 
+}
+.main5-cake1-name5{
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 5px 0;
+}
+.main5-cake1-price5{
+  font-size: 1em;
+  color: #888;
+  margin: 5px 0;
+}
+
+.main5-cake1-cart5{
+  background-color:black;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 200px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.main5-cake1-cart5:hover {
+  background-color:white;
+  border:solid black 1px;
+  color: #000;
+}
+.main5-cake-item6{
+  position: absolute;
+  background:transparent;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  height: 300px; /* Consistent width for all items */
+  padding: 15px;
+  transition: transform 0.2s ease-in-out;
+  font-family: 'Poppins';
+  margin-top: 920px;
+  margin-left: 425px;
+  
+}
+
+.main5-cake-image6{  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.10);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: absolute;
+  border-radius: 30px;
+  margin-top:650px;
+  margin-left:425px;
+
+
+}
+.main5-cake-image6:hover{
+  transform: scale(1.1); 
+}
+.main5-cake1-name6{
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 5px 0;
+}
+.main5-cake1-price6{
+  font-size: 1em;
+  color: #888;
+  margin: 5px 0;
+}
+
+.main5-cake1-cart6{
+  background-color:black;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 200px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.main5-cake1-cart6:hover {
+  background-color:white;
+  border:solid black 1px;
+  color: #000;
+}
+.main5-cake-item7{
+  position: absolute;
+  background:transparent;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  height: 300px; /* Consistent width for all items */
+  padding: 15px;
+  transition: transform 0.2s ease-in-out;
+  font-family: 'Poppins';
+  margin-top: 920px;
+  margin-left: 775px;
+  
+}
+
+.main5-cake-image7{  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.10);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: absolute;
+  border-radius: 30px;
+  margin-top:650px;
+  margin-left:775px;
+
+
+}
+.main5-cake-image7:hover{
+  transform: scale(1.1); 
+}
+.main5-cake1-name7{
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 5px 0;
+}
+.main5-cake1-price7{
+  font-size: 1em;
+  color: #888;
+  margin: 5px 0;
+}
+
+.main5-cake1-cart7{
+  background-color:black;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 200px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.main5-cake1-cart7:hover {
+  background-color:white;
+  border:solid black 1px;
+  color: #000;
+}
+.main5-cake-item8{
+  position: absolute;
+  background:transparent;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px;
+  height: 300px; /* Consistent width for all items */
+  padding: 15px;
+  transition: transform 0.2s ease-in-out;
+  font-family: 'Poppins';
+  margin-top: 920px;
+  margin-left: 1120px;
+  
+}
+
+.main5-cake-image8{  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.10);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: absolute;
+  border-radius: 30px;
+  margin-top:650px;
+  margin-left:1120px;
+
+
+}
+.main5-cake-image8:hover{
+  transform: scale(1.1); 
+}
+.main5-cake1-name8{
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 5px 0;
+}
+.main5-cake1-price8{
+  font-size: 1em;
+  color: #888;
+  margin: 5px 0;
+}
+
+.main5-cake1-cart8{
+  background-color:black;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  width: 200px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.main5-cake1-cart8:hover {
+  background-color:white;
+  border:solid black 1px;
+  color: #000;
+}
+.footer {
+  background-color: hotpink;
+  color: black;
+  text-align: center;
+  padding: 10px 0;
+  position: absolute;
+  margin-top: 6100px;
+  width: 100%;
+  border: #000 ;
+  height: 150px;
+  padding: 100px;
+  font-family: 'Poppins',sans-serif ;
+  font-size: medium;
+}
+  </style>
+
+</head>
+<body>
+  <header>
+    <div class="box">
+      <div class="icon">
+      <i class="fa fa-search"></i><div class="search">Search</div>
+    </div>
+    <div class="cart">
+      <button class="bt1">
+      <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#000000"><path d="M280-80q-33 0-56.5-23.5T200-160q0-33 23.5-56.5T280-240q33 0 56.5 23.5T360-160q0 33-23.5 56.5T280-80Zm400 0q-33 0-56.5-23.5T600-160q0-33 23.5-56.5T680-240q33 0 56.5 23.5T760-160q0 33-23.5 56.5T680-80ZM246-720l96 200h280l110-200H246Zm-38-80h590q23 0 35 20.5t1 41.5L692-482q-11 20-29.5 31T622-440H324l-44 80h480v80H280q-45 0-68-39.5t-2-78.5l54-98-144-304H40v-80h130l38 80Zm134 280h280-280Z"/></svg>
+      </button>
+    </div>
+      <img src="{% static 'images/logo_transparent.png' %}" alt="Logo" class="img">
+      <div class="link1">
+        <a href="#" class="l1">Home</a>
+        <a href="#" class="l1">Pages</a>
+      </div>
+        <div class="link2">
+        <a href="#" class="l2">About</a>
+        <a href="#" class="l2">Contact</a>
+      </div>
+    </div>
+  </header>
+  <nav>
+    <div class="nav-container">
+    <div class="nav-block">
+      <h1 class="our">Our Lists </h1>
+      <a href="#" class="a1">Special Cakes</a><br><br>
+      <a href="#" class="a1">Cup Cakes</a><br><br>
+      <a href="#" class="a1">Birthday Cakes</a><br><br>
+      <a href="#" class="a1">Wedding Cakes</a><br><br>
+      <a href="#" class="a1">Fresh bakes</a><br>
+    </div>
+  </div>
+  </nav>
+  <div class="live-container">
+    <h1 class="feature-head">Featured Cakes :</h1>
+    <div class="slider-container">
+      <div class="slider">
+        <img src="{% static 'images/1hot.jpg' %}" alt="Cake 1" class="c1">
+        <img src="{% static 'images/2hot.jpg' %}" alt="Cake 2" class="c2">
+        <img src="{% static 'images/4hot.jpg' %}" alt="Cake 4" class="c4">
+      </div>
+    </div>
+  </div>
+  <div class="name-container">
+    <a href="#" class="name1">Choco Rose Charm</a>
+    <a href="#" class="name2">Berry Macroan</a>
+    <a href="#" class="name3">Folral Loaf</a>
+  </div>
+  <div class="main-container1">
+    <h2 class="main-name1">Special Cakes :</h2>
+    <img src="{% static 'images/imresizer-1732107091286.jpg' %}" alt="Cake Image" class="cake-image">
+    <div class="main1-cake-item">
+      <a href="#" class="main1-cake1-name1">Party Pop</a>
+      <p class="main1-cake1-price1">₹ 1200</p>
+      <button class="main1-cake1-cart1">Add to Cart</button>
+    </div>
+    <img src="{% static 'images/imresizer-1732110649140.jpg' %}" alt="Cake Image" class="cake-image2">
+    <div class="main1-cake-item2">
+      <a href="#" class="main1-cake1-name2">Pink Candy Paradise</a>
+      <p class="main1-cake1-price2">₹ 900</p>
+      <button class="main1-cake1-cart2">Add to Cart</button>
+    </div>
+    <img src="{% static 'images/imresizer-1732107050905.jpg' %}" alt="Cake Image" class="cake-image3">
+    <div class="main1-cake-item3">
+      <a href="#" class="main1-cake1-name3">Creamy PanCake</a>
+      <p class="main1-cake1-price3">₹ 1000</p>
+      <button class="main1-cake1-cart3">Add to Cart</button>
+    </div>
+    <img src="{% static 'images/imresizer-1732107252182.jpg' %}" alt="Cake Image" class="cake-image4">
+    <div class="main1-cake-item4">
+      <a href="#" class="main1-cake1-name4">Berry Bliss</a>
+      <p class="main1-cake1-price4">₹ 750</p>
+      <button class="main1-cake1-cart4">Add to Cart</button>
+    </div>
+    <img src="{% static 'images/6hot.jpg' %}" alt="Cake Image" class="cake-image5">
+    <div class="main1-cake-item5">
+      <a href="#" class="main1-cake1-name5">Volcanic Candy</a>
+      <p class="main1-cake1-price5">₹ 850</p>
+      <button class="main1-cake1-cart5">Add to Cart</button>
+    </div>
+    <img src="{% static 'images/3hot.jpg' %}" alt="Cake Image" class="cake-image6">
+    <div class="main1-cake-item6">
+      <a href="#" class="main1-cake1-name6">Choco Castle  </a>
+      <p class="main1-cake1-price6">₹ 700</p>
+      <button class="main1-cake1-cart6">Add to Cart</button>
+    </div>
+    <img src="{% static 'images/5hot.jpg' %}" alt="Cake Image" class="cake-image7">
+    <div class="main1-cake-item7">
+      <a href="#" class="main1-cake1-name7">Cream & Coffee</a>
+      <p class="main1-cake1-price7">₹ 800</p>
+      <button class="main1-cake1-cart7">Add to Cart</button>
+    </div>
+    <img src="{% static 'images/4hot.jpg' %}" alt="Cake Image" class="cake-image8">
+    <div class="main1-cake-item8">
+      <a href="#" class="main1-cake1-name8">Floral Loaf</a>
+      <p class="main1-cake1-price8">₹ 1100</p>
+      <button class="main1-cake1-cart8">Add to Cart</button>
+    </div>
+  </div>
+  <div class="main-container2">
+    <h2 class="main-name2">Cup   Cakes :</h2>
+    <img src="{% static 'images/imresizer-1732268750009.jpg' %}" alt="Cake Image" class="main2-cake-image1">
+    <div class="main2-cake-item1">
+      <a href="#" class="main2-cake1-name1" style="font-size: large;"><b>Strawberry Drop</b></a>
+      <p class="main2-cake1-price1">₹ 180</p>
+      <button class="main2-cake1-cart1">Add to Cart</button>
+    </div>
+    <img src="{% static 'images/imresizer-1732268590669.jpg' %}" alt="Cake Image" class="main2-cake-image2">
+    <div class="main2-cake-item2">
+      <a href="#" class="main2-cake1-name2" style="font-size: large;"><b>Cream Cherry</b></a>
+      <p class="main2-cake1-price2">₹ 200</p>
+      <button class="main2-cake1-cart2">Add to Cart</button>
+    </div>
+    <img src="{% static 'images/imresizer-1732268463249.jpg' %}" alt="Cake Image" class="main2-cake-image3">
+    <div class="main2-cake-item3">
+      <a href="#" class="main2-cake1-name3" style="font-size: large;"><b>Jim & Jam</b></a>
+      <p class="main2-cake1-price3">₹ 220</p>
+      <button class="main2-cake1-cart3">Add to Cart</button>
+    </div>
+    <img src="{% static 'images/imresizer-1732268704921.jpg' %}" alt="Cake Image" class="main2-cake-image4">
+    <div class="main2-cake-item4">
+      <a href="#" class="main2-cake1-name4" style="font-size: large;"><b>Mix Choco</b></a>
+      <p class="main2-cake1-price4">₹ 200</p>
+      <button class="main2-cake1-cart4">Add to Cart</button>
+    </div>
+    <img src="{% static 'images/imresizer-1732268640554.jpg' %}" alt="Cake Image" class="main2-cake-image5">
+    <div class="main2-cake-item5">
+      <a href="#" class="main2-cake1-name5" style="font-size: large;"><b>Rainbow Swirl</b></a>
+      <p class="main2-cake1-price5">₹ 190</p>
+      <button class="main2-cake1-cart5">Add to Cart</button>
+    </div>
+    <img src="{% static 'images/imresizer-1732268544311.jpg' %}" alt="Cake Image" class="main2-cake-image6">
+    <div class="main2-cake-item6">
+      <a href="#" class="main2-cake1-name6" style="font-size: large;"><b>Matcha Cup</b></a>
+      <p class="main2-cake1-price6">₹ 250</p>
+      <button class="main2-cake1-cart6">Add to Cart</button>
+    </div>
+    <img src="{% static 'images/imresizer-1732268506080.jpg' %}" alt="Cake Image" class="main2-cake-image7">
+    <div class="main2-cake-item7">
+      <a href="#" class="main2-cake1-name7" style="font-size: large;"><b>Maple Crunch</b></a>
+      <p class="main2-cake1-price7">₹ 220</p>
+      <button class="main2-cake1-cart7">Add to Cart</button>
+    </div>
+    <img src="{% static 'images/imresizer-1731740237107.jpg' %}" alt="Cake Image" class="main2-cake-image8">
+    <div class="main2-cake-item8">
+      <a href="#" class="main2-cake1-name8" style="font-size: large;"><b>Mix Berry</b></a>
+      <p class="main2-cake1-price8">₹ 230</p>
+      <button class="main2-cake1-cart8">Add to Cart</button>
+    </div>
+    </div>
+    <div class="main-container3">
+      <h2 class="main-name3">Birthday Cakes :</h2>
+      <img src="{% static 'images/imresizer-1732279042327.jpg' %}" alt="Cake Image" class="main3-cake-image1">
+      <div class="main3-cake-item1">
+      <a href="#" class="main3-cake1-name1">Pink Pastle</a>
+      <p class="main3-cake1-price1">₹ 230</p>
+      <button class="main3-cake1-cart1">Add to Cart</button>
+    </div>
+      <img src="{% static 'images/imresizer-1732279104841.jpg' %}" alt="Cake Image" class="main3-cake-image2">
+      <div class="main3-cake-item2">
+      <a href="#" class="main3-cake1-name2">Black Forest</a>
+      <p class="main3-cake1-price2">₹ 230</p>
+      <button class="main3-cake1-cart2">Add to Cart</button>
+    </div>
+      <img src="{% static 'images/imresizer-1732279237232.jpg' %}" alt="Cake Image" class="main3-cake-image3">
+      <div class="main3-cake-item3">
+      <a href="#" class="main3-cake1-name3">Blueberry Cheese</a>
+      <p class="main3-cake1-price3">₹ 230</p>
+      <button class="main3-cake1-cart3">Add to Cart</button>
+    </div>
+      <img src="{% static 'images/imresizer-1732279300801.jpg' %}" alt="Cake Image" class="main3-cake-image4">
+      <div class="main3-cake-item4">
+      <a href="#" class="main3-cake1-name4">Creamy Classic</a>
+      <p class="main3-cake1-price4">₹ 230</p>
+      <button class="main3-cake1-cart4">Add to Cart</button>
+    </div>
+      <img src="{% static 'images/imresizer-1732279151920.jpg' %}" alt="Cake Image" class="main3-cake-image5">
+      <div class="main3-cake-item5">
+      <a href="#" class="main3-cake1-name5">Carrot Cream</a>
+      <p class="main3-cake1-price5">₹ 230</p>
+      <button class="main3-cake1-cart5">Add to Cart</button>
+    </div>
+      <img src="{% static 'images/1hot.jpg' %}" alt="Cake Image" class="main3-cake-image6">
+      <div class="main3-cake-item6">
+      <a href="#" class="main3-cake1-name6">Choco Rose Charm</a>
+      <p class="main3-cake1-price6">₹ 230</p>
+      <button class="main3-cake1-cart6">Add to Cart</button>
+    </div>
+      <img src="{% static 'images/2hot.jpg' %}" alt="Cake Image" class="main3-cake-image7">
+      <div class="main3-cake-item7">
+      <a href="#" class="main3-cake1-name7">Berry Macroan</a>
+      <p class="main3-cake1-price7">₹ 230</p>
+      <button class="main3-cake1-cart7">Add to Cart</button>
+    </div>
+      <img src="{% static 'images/imresizer-1732110757920.jpg' %}" alt="Cake Image" class="main3-cake-image8">
+      <div class="main3-cake-item8">
+      <a href="#" class="main3-cake1-name8">Blueberry Blossom</a>
+      <p class="main3-cake1-price8">₹ 230</p>
+      <button class="main3-cake1-cart8">Add to Cart</button>
+    </div>
+    </div>
+    <div class="main-container4">
+      <h2 class="main-name4">Wedding Cakes :</h2>
+      <img src="{% static 'images/imresizer-1732110813973.jpg' %}" alt="Cake Image" class="main4-cake-image1">
+      <div class="main4-cake-item1">
+      <a href="#" class="main4-cake1-name1">Berry Bliss Delight</a>
+      <p class="main4-cake1-price1">₹ 1200</p>
+      <button class="main4-cake1-cart1">Add to Cart</button>
+    </div>
+      <img src="{% static 'images/imresizer-1732365837583.jpg' %}" alt="Cake Image" class="main4-cake-image2">
+      <div class="main4-cake-item2">
+      <a href="#" class="main4-cake1-name2">Velvet Rose Charm</a>
+      <p class="main4-cake1-price2">₹ 1350</p>
+      <button class="main4-cake1-cart2">Add to Cart</button>
+    </div>
+      <img src="{% static 'images/imresizer-1732365879936.jpg' %}" alt="Cake Image" class="main4-cake-image3">
+      <div class="main4-cake-item3">
+      <a href="#" class="main4-cake1-name3">Golden Petal Dream</a>
+      <p class="main4-cake1-price3">₹ 1500</p>
+      <button class="main4-cake1-cart3">Add to Cart</button>
+    </div>
+      <img src="{% static 'images/imresizer-1732365928940.jpg' %}" alt="Cake Image" class="main4-cake-image4">
+      <div class="main4-cake-item4">
+      <a href="#" class="main4-cake1-name4">Tropical Sunset</a>
+      <p class="main4-cake1-price4">₹ 1200</p>
+      <button class="main4-cake1-cart4">Add to Cart</button>
+    </div>
+      <img src="{% static 'images/imresizer-1732365972941.jpg' %}" alt="Cake Image" class="main4-cake-image5">
+      <div class="main4-cake-item5">
+      <a href="#" class="main4-cake1-name5">Floral Fantasy Layer</a>
+      <p class="main4-cake1-price5">₹ 1600</p>
+      <button class="main4-cake1-cart5">Add to Cart</button>
+    </div>
+      <img src="{% static 'images/imresizer-1732366015959.jpg' %}" alt="Cake Image" class="main4-cake-image6">
+      <div class="main4-cake-item6">
+      <a href="#" class="main4-cake1-name6">Classic Vanilla Bloom</a>
+      <p class="main4-cake1-price6">₹ 1100</p>
+      <button class="main4-cake1-cart6">Add to Cart</button>
+    </div>
+      <img src="{% static 'images/imresizer-1732366053608.jpg' %}" alt="Cake Image" class="main4-cake-image7">
+      <div class="main4-cake-item7">
+      <a href="#" class="main4-cake1-name7">Chocolate Garden</a>
+      <p class="main4-cake1-price7">₹ 1250</p>
+      <button class="main4-cake1-cart7">Add to Cart</button>
+    </div>
+      <img src="{% static 'images/imresizer-1732107451834.jpg' %}" alt="Cake Image" class="main4-cake-image8">
+      <div class="main4-cake-item8">
+      <a href="#" class="main4-cake1-name8">Spring Meadow</a>
+      <p class="main4-cake1-price8">₹ 1300</p>
+      <button class="main4-cake1-cart8">Add to Cart</button>
+    </div>
+    </div>
+    <div class="main-container5">
+      <h2 class="main-name5">Fresh Bakes :</h2>
+      <img src="{% static 'images/imresizer-1732366097071.jpg' %}" alt="Cake Image" class="main5-cake-image1">
+      <div class="main5-cake-item1">
+      <a href="#" class="main5-cake1-name1">Banana Walnut Loaf </a>
+      <p class="main5-cake1-price1">₹ 200</p>
+      <button class="main5-cake1-cart1">Add to Cart</button>
+    </div>
+      <img src="{% static 'images/imresizer-1732366324713.jpg' %}" alt="Cake Image" class="main5-cake-image2">
+      <div class="main5-cake-item2">
+      <a href="#" class="main5-cake1-name2">Choco Chip Cookies </a>
+      <p class="main5-cake1-price2">₹ 250</p>
+      <button class="main5-cake1-cart2">Add to Cart</button>
+    </div>
+      <img src="{% static 'images/imresizer-1732366374831.jpg' %}" alt="Cake Image" class="main5-cake-image3">
+      <div class="main5-cake-item3">
+      <a href="#" class="main5-cake1-name3">Choco Brownies</a>
+      <p class="main5-cake1-price3">₹ 350</p>
+      <button class="main5-cake1-cart3">Add to Cart</button>
+    </div>
+      <img src="{% static 'images/imresizer-1732366426045.jpg' %}" alt="Cake Image" class="main5-cake-image4">
+      <div class="main5-cake-item4">
+      <a href="#" class="main5-cake1-name4">Classic Lattice Pie</a>
+      <p class="main5-cake1-price4">₹ 400</p>
+      <button class="main5-cake1-cart4">Add to Cart</button>
+    </div>
+      <img src="{% static 'images/imresizer-1732366470808.jpg' %}" alt="Cake Image" class="main5-cake-image5">
+      <div class="main5-cake-item5">
+      <a href="#" class="main5-cake1-name5">Festive Sugar Biscuits</a>
+      <p class="main5-cake1-price5">₹ 240</p>
+      <button class="main5-cake1-cart5">Add to Cart</button>
+    </div>
+      <img src="{% static 'images/imresizer-1732366529674.jpg' %}" alt="Cake Image" class="main5-cake-image6">
+      <div class="main5-cake-item6">
+      <a href="#" class="main5-cake1-name6">Almond Croissants</a>
+      <p class="main5-cake1-price6">₹ 400</p>
+      <button class="main5-cake1-cart6">Add to Cart</button>
+    </div>
+      <img src="{% static 'images/imresizer-1732110931082.jpg' %}" alt="Cake Image" class="main5-cake-image7">
+      <div class="main5-cake-item7">
+      <a href="#" class="main5-cake1-name7">Chocolate Bundt</a>
+      <p class="main5-cake1-price7">₹ 450</p>
+      <button class="main5-cake1-cart7">Add to Cart</button>
+    </div>
+      <img src="{% static 'images/imresizer-1732106978574.jpg' %}" alt="Cake Image" class="main5-cake-image8">
+      <div class="main5-cake-item8">
+      <a href="#" class="main5-cake1-name8"> Lemon Glazed Pound</a>
+      <p class="main5-cake1-price8">₹ 350</p>
+      <button class="main5-cake1-cart8">Add to Cart</button>
+    </div>
+    </div>
+    <footer class="footer">
+      <p>&copy; 2024 Cakes & Bakes. All rights reserved.</p>
+      <p><i class="fa fa-phone"></i> +123-456-7890 | <i class="fa fa-envelope"></i> info@cakesandbakes.com</p>
+    </footer>
+
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+      const buttons = document.querySelectorAll('button');
+      buttons.forEach(button => {
+        button.addEventListener('mouseenter', () => {
+          button.style.transform = 'scale(1.1)';
+          button.style.transition = 'transform 0.2s ease-in-out';
+        });
+    
+        button.addEventListener('mouseleave', () => {
+          button.style.transform = 'scale(1)';
+        });
+      });
+      const addToCartButtons = document.querySelectorAll('.add2-1, .add2-2, .add2-3');
+      addToCartButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          alert('Item added to cart!');
+        });
+      });
+    </script>
+    
+    
+</body>
+</html>

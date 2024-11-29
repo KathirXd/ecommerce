@@ -1,0 +1,239 @@
+{% load math_filters %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <!-- Bootstrap CSS -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Righteous&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Righteous&family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+  font-family: 'Breathing';
+  src: url("{% static 'fonts/Breathing.ttf' %}") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  }
+.box {
+    --mask: radial-gradient(36.89px at 50% calc(100% - 51px), #000 99%, #0000 101%) calc(50% - 40px) 0/80px 100%, 
+            radial-gradient(36.89px at 50% calc(100% + 31px), #0000 99%, #000 101%) 50% calc(100% - 20px)/80px 100% repeat-x;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+    background: hotpink;
+    width: 100%;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Logo Styling */
+.Logo {
+    height: 100px;
+    width: 100px;
+}
+
+/* Header Image Styling */
+img {
+    height: 300px;
+    width: 300px;
+    margin-top: -10px;
+}
+/* Navigation Links */
+.link1, .link2 {
+    position: absolute;
+    font-size: large;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 50px;
+    top: 20px;
+    margin-left: 100px;
+}
+
+.link1 {
+    right: 340px;
+}
+
+.link2 {
+    left: 80px;
+}
+
+a:link, a:hover, a:active, a:visited {
+    text-decoration: none;
+    color: black;
+}
+.l1{
+    margin-left: 120px;
+
+}
+.l2{
+    margin-left: 120px;
+
+}
+.cart-icon {
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    margin-top:-120px;
+    margin-left: 1280px;
+    background-color: #fffece !important;
+    padding: 10px 30px;
+    border-radius: 30px;
+    width: 140px;
+    height: 47px;
+
+}
+
+.cart-icon:hover {
+    color:black !important;
+}
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fff5f7;
+        }
+        h1, h3 {
+            color: #343a40;
+        }
+        .product-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+            background-color: #fff;
+            padding: 30px 20px!important;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+        .product-image {
+            max-height: 300px;
+            object-fit: cover;
+            margin-bottom: 10px;
+            border-radius: 8px;
+        }
+        .btn {
+            font-size: 0.9rem;
+        }
+        .btn-primary {
+            background-color: hotpink !important;
+            color: white ;
+            padding: 10px !important;
+            border: none;
+            border-radius: 15px;
+        }
+        .btn-primary:hover {
+            background-color:#fffece !important;
+            color: black !important;
+        }
+        .btn-danger {
+            background-color: #dc3545;
+            border-color: #dc3545;
+        }
+        .btn-danger:hover {
+            background-color: #c82333;
+            border-color: #c82333;
+        }
+        .btn-secondary {
+            background-color:black;
+            border-color: black;
+        }
+        .btn-secondary:hover {
+            background-color: black;
+            border-color: black;
+        }
+        .total-price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: black;
+        }
+        @media (max-width: 768px) {
+            .product-card {
+                margin-bottom: 20px;
+            }
+            .product-image {
+                max-height: 120px;
+            }
+            .btn {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="box">
+            <img src="{% static 'images/logo_transparent.png' %}" alt="Logo" class="img">
+            <div class="link1">
+                <a href="{% url 'index' %}" class="l1">Home</a>
+                <a href="{% url 'product_list' %}" class="l1">Products</a>
+            </div>
+            <div class="link2">
+                <a href="{% url 'about' %}" class="l2">About</a>
+                <a href="#footer" class="l2">Contact</a>
+            </div>
+        </div>
+    </header>
+        <div class="ml-auto">
+            <a href="{% url 'view_cart' %}"  class="cart-icon">
+                <i class="fas fa-shopping-cart"></i> Cart
+            </a>
+        </div>
+    <div class="container py-5">
+        <h1 class="text-center mb-4">Your Cart</h1>
+
+        {% if cart_items %}
+        <div class="row g-4">
+            {% for item in cart_items %}
+                <div class="col-md-4 col-sm-6">
+                    <div class="product-card p-3">
+                        <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}" class="product-image img-fluid">
+                        <h3 class="product-name mt-2">{{ item.product.name }}</h3>
+                        <p class="product-price">Price: ₹ {{ item.product.price }}</p>
+                        <form method="POST" action="{% url 'update_cart' %}" class="d-flex align-items-center justify-content-between mt-2">
+                            {% csrf_token %}
+                            <button type="submit" name="action" value="decrease" class="btn btn-sm btn-secondary">-</button>
+                            <span class="mx-2">Quantity: {{ item.quantity }}</span>
+                            <button type="submit" name="action" value="increase" class="btn btn-sm btn-secondary">+</button>
+                            <input type="hidden" name="product_id" value="{{ item.product.id }}">
+                        </form>
+                        <form method="POST" action="{% url 'update_cart' %}" class="mt-2">
+                            {% csrf_token %}
+                            <button type="submit" name="action" value="remove" class="btn btn-sm btn-danger">Remove</button>
+                            <input type="hidden" name="product_id" value="{{ item.product.id }}">
+                        </form>
+
+                        <p class="product-price mt-3">Subtotal: ₹ {{ item.product.price|multiply:item.quantity }}</p>
+
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="text-end mt-4">
+            <h3 class="total-price">Total Price: ₹ {{ total_price }}</h3>
+            <a href="{% url 'product_list' %}" class="btn btn-primary">Continue Shopping</a>
+        </div>
+        {% else %}
+            <p class="text-center">Your cart is empty.</p>
+            <div class="text-center">
+                <a href="{% url 'product_list' %}" class="btn btn-primary">Start Shopping</a>
+            </div>
+        {% endif %}
+    </div>
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    ></script>
+</body>
+</html>

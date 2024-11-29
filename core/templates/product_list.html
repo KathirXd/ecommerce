@@ -1,0 +1,52 @@
+{% extends 'main.html' %}
+
+{% block content %}
+    <div class="container py-5">
+        <h1 class="text-center mb-4">Our Products</h1>
+        <div class="row mb-4">
+            <div class="col-md-6 offset-md-3">
+                <input
+                    type="text"
+                    id="searchBar"
+                    class="form-control"
+                    placeholder="Search for products..."
+                    onkeyup="filterProducts()"
+                >
+            </div>
+        </div>
+
+        <div class="row g-4" id="productList">
+            {% for product in products %}
+                <div class="col-md-3 col-sm-6 product-item" data-name="{{ product.name|lower }}">
+                    <div class="product-card">
+                        <a href="{% url 'product_detail' product.id %}">
+                            <img src="{{ product.image.url }}" alt="{{ product.name }}" class="product-image img-fluid">
+                        </a>
+                        <h3 class="product-name mt-2">
+                            <a href="{% url 'product_detail' product.id %}">{{ product.name }}</a>
+                        </h3>
+                        <p class="product-price">₹ {{ product.price }}</p>
+                        <a href="{% url 'add_to_cart' product.id %}" class="add-to-cart-btn">Add to Cart</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+{% endblock %}
+
+<script>
+    function filterProducts() {
+        const searchInput = document.getElementById("searchBar").value.toLowerCase();
+        const productItems = document.querySelectorAll(".product-item");
+
+        productItems.forEach((item) => {
+            const productName = item.getAttribute("data-name");
+            if (productName.includes(searchInput)) {
+                item.style.display = "block";
+            } else {
+                item.style.display = "none";
+            }
+        });
+    }
+</script>
